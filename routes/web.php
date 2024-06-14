@@ -41,3 +41,6 @@ Route::get('/citoyen/ajout',[CitoyenController::class,'ajout_citoyen']);
 //traitement
 Route::post('/citoyen/ajout/traitement',[CitoyenController::class,'ajout_citoyen_traitement']);
 
+Route::get('/Connexion', function(){
+    return view('Connexion');
+});
