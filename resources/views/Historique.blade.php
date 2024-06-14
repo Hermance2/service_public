@@ -1,29 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CitizenConnect-Liste-Des-Clients</title>
-    <style>
-        #overflow {
-            height: 460px;
-            width: 1300px;
-            overflow-y: scroll;
-        }
-
-    </style>
-</head>
-<body>
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -335,15 +311,15 @@
     <div class="sidebar">
         <h2><i class="fa-solid fa-table-columns"></i>Tableau de bord</h2>
         <ul>
-            <li><a href="service.html"><i class="fa-solid fa-bell-concierge"></i>Liste des Services</a></li>
-            <li><a href="liste-des-citoyen.html"><i class="fa-solid fa-people-group"></i> Liste des citoyens</a></li>
-            <li><a href="historic.html"><i class="fa-solid fa-landmark"></i> Historiques</a></li>
+            <li><a href="service"><i class="fa-solid fa-bell-concierge"></i>Liste des Services</a></li>
+            <li><a href="ListeCitoyens"><i class="fa-solid fa-people-group"></i> Liste des citoyens</a></li>
+            <li><a href="Historique"><i class="fa-solid fa-landmark"></i> Historiques</a></li>
         </ul>
     </div>
     <div class="main-content">
         <div class="head">
             <header>
-                <h1>LISTE DES <span>CYTOYENS</span> </h1>
+                <h1><span>HISTORIQUES</span></h1>
             </header>
             <div class="search-container">
                 <input type="text" placeholder="Rechercher..." class="search-input">
@@ -351,38 +327,44 @@
             </div>
         </div>
         <section class="section1">
-            <div>
-                <table class="table table-hover" Id="overflow">
-                    <thead>
-                        <tr>
-                            <th>Nom</th>
-                            <th>Prenom</th>
-                            <th>Adresse</th>
-                            <th>CIN</th>
-                            <th>Email</th>
-                            <th>Contact</th>
-                            <th>Adresse</th>
-                            <th>Operation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($citoyens as $citoyen)
-                        <tr>
-                            <td>{{$citoyen->nomCitoyen}}</td>
-                            <td>{{$citoyen->prenomCitoyen}}</td>
-                            <td>{{$citoyen->email}}</td>
-                            <td>{{$citoyen->numCIN}}</td>
-                            <td>{{$citoyen->telephone}}</td>
-                            <td>{{$citoyen->adresse}}</td>
-                            <td>
-                                <a href="/citoyen/update/{{$citoyen->id}}" class="btn btn-primary">Modifier</a>
-                                <input type="button" value="Supprimer" class="btn btn-danger">
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+            <table class="tableau">
+                <thead>
+                    <tr>
+                        <th class="th-nom">NOMS</th>
+                        <th>PRENOMS</th>
+                        <th>NUM CIN</th>
+                        <th class="th-sous-service">SOUS-SERVICES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ligne 1, Colonne 1</td>
+                        <td>Ligne 1, Colonne 2</td>
+                        <td>Ligne 1, Colonne 3</td>
+                        <td>Ligne 1, Colonne 4</td>
+                    </tr>
+                    <tr>
+                        <td>Ligne 2, Colonne 1</td>
+                        <td>Ligne 2, Colonne 2</td>
+                        <td>Ligne 2, Colonne 3</td>
+                        <td>Ligne 2, Colonne 4</td>
+                    </tr>
+                    <tr>
+                        <td>Ligne 2, Colonne 1</td>
+                        <td>Ligne 2, Colonne 2</td>
+                        <td>Ligne 2, Colonne 3</td>
+                        <td>Ligne 2, Colonne 4</td>
+                    </tr>
+                    <tr>
+                        <td>Ligne 2, Colonne 1</td>
+                        <td>Ligne 2, Colonne 2</td>
+                        <td>Ligne 2, Colonne 3</td>
+                        <td>Ligne 2, Colonne 4</td>
+                    </tr>
+                    <!-- Ajoutez plus de lignes comme ci-dessus -->
+                </tbody>
+            </table>
+
         </section>
     </div>
 </body>
