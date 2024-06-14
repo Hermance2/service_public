@@ -13,9 +13,25 @@ class CitoyenController extends Controller
         return view('citoyen.ajout');
     }
 
-    public function ajout_citoyen_traitement(CitoyenRequest $request){
+    public function ajout_citoyen_traitement(Request $request){
         //traitement ajout de citoyen
-        $citoyen = Citoyen::created($request->validated());
+        $request->validate([
+            'nomCitoyen'=> 'required',
+            'prenomCitoyen' => 'required',
+            'email' => 'required',
+            'numCIN' => 'required',
+            'telephone' => 'required',
+            'adresse'=> 'required'
+        ]);
+
+        $citoyen = new Citoyen();
+        $citoyen -> nomCitoyen = $request->input('nomCitoyen');
+        $citoyen -> prenomCitoyen = $request->input('prenomCitoyen');
+        $citoyen -> email = $request->input('email');
+        $citoyen -> numCIN = $request->input('numCIN');
+        $citoyen -> telephone = $request->input('telephone');
+        $citoyen -> adresse = $request->input('adresse');
+        $citoyen->save();
         return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien enregistre");
 
     }

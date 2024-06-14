@@ -54,6 +54,7 @@
 <body>
     <div>
         <form action="ajout/traitement" method="post">
+            @csrf
             <h1>Veuillez entrer votre informations</h1>
             <label for="">Nom</label><br>
             <input type="text" name="nomCitoyen"><br>
