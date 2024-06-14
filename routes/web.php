@@ -31,7 +31,7 @@ Route::get('SAP', function () {
     return view('souservice/SAP');
 });
 Route::get('/ActeDeNaissance', function () {
-    return view('souservice/ActeDeNaissance');
+    return view('Acte_de_naissance/ActeDeNaissance');
 });
 //service
 Route::get('/service', [ServiceController::class, 'liste_service'])->name('listeService');
