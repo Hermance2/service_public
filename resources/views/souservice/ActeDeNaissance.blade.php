@@ -157,7 +157,7 @@
                     <label for="">Date de naissance</label><br>
                     <input type="date" name="datenaissance"><br>
                     <label for="">Lieu de naissance</label><br>
-                    <input type="text" name="lielieunaissancanceunaiss"><br>
+                    <input type="text" name="lielieunaissanc"><br>
                     <label for="">Nom de la mere</label><br>
                     <input type="text" name="nomdemandeur"><br>
                     <label for="">Nom du pere </label><br>

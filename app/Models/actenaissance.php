@@ -12,10 +12,13 @@ class actenaissance extends Model
     protected $fillable = [
         'citoyens_id',
         'services_id',
-        'nomdece',
-        'prenomdece',
-        'datedece',
-        'lieu'
+        'nomdemandeur',
+        'prenomdemandeur',
+        'datenaissance',
+        'lieunaissancance',
+        'mere',
+        'pere',
+        'motif'
     ];
 
     
