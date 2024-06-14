@@ -58,18 +58,18 @@
             @csrf
             <h1>Ajouter une nouvelle service</h1>
             <label for="">Nom du service</label><br>
-            <input type="text" name="nom_service">
+            <input type="text" name="nom_service" value="{{$services->nom_service}}">
             @error('nom_service')
             {{$message}}
             @enderror
             <br>
             <label for="">Lieu</label><br>
-            <input type="text" name="lieu">
+            <input type="text" name="lieu" value="{{$services->lieu}}">
             @error('nom_service')
             {{$message}}
             @enderror
             <br><br>
-            <input type="submit" value="Modifier" name="modifier" class="btn btn-primary">
+            <input type="submit" value="Modifier" name="modifier" class="btn btn-primary" >
             <input type="button" value="Retour" name="retour" class="btn btn-danger">
         </form>
     </div>

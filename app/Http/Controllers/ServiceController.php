@@ -20,15 +20,11 @@ class ServiceController extends Controller
         'nom_service' => 'required',
         'lieu' => 'required'
     ]);
-
-    // Create a new service instance and assign the request values
     $service = new Service();
     $service->nom_service = $request->input('nom_service'); 
     $service->lieu = $request->input('lieu');
 
     $service->save();
-
-    // Redirect to the list service route with a success message
     return redirect()->route('listeService')->with('success', 'Le service a été bien enregistré');
 }
 
@@ -45,14 +41,21 @@ class ServiceController extends Controller
     public function update_service($id){
         //traitement ny formulaire ajout 
         $services = Service::find($id);
-        return  view('servicee.update',[
+        return  view('servicee.modification',[
             'services'=>$services
         ]);
     }
     
-    public function update_citoyen_traitement($id,ServiceRequest $request){
+    public function update_citoyen_traitement($id,Request $request){
         //traitement formulaire update
-        $service = Service::update($request->validate());
+        $request->validate([
+            'nom_service' => 'required',
+            'lieu' => 'required'
+        ]);
+        $service = Service::find($id);
+        $service->nom_service = $request->input('nom_service'); 
+        $service->lieu = $request->input('lieu');
+        $service->update();
         return redirect()->route('listeService')->with('Succée,la service a été bien modifiée');
     }
 }

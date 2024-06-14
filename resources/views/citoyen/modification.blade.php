@@ -53,21 +53,21 @@
 </head>
 <body>
     <div>
-        <form action="ajout/traitement" method="post">
+        <form action="/citoyen/update/{id}-traitement" method="post">
         @csrf
             <h1>Modifier les informations</h1>
             <label for="">Nom</label><br>
-            <input type="text" name="nomCitoyen"><br>
+            <input type="text" name="nomCitoyen" value="{{$citoyens->nomCitoyen}}"><br>
             <label for="">Premon </label><br>
-            <input type="text" name="prenomCitoyen"><br>
+            <input type="text" name="prenomCitoyen"  value="{{$citoyens->prenomCitoyen}}"><br>
             <label for="">Adresse precise</label><br>
-            <input type="text" name="adresse"><br>
+            <input type="text" name="adresse"  value="{{$citoyens->adresse}}"><br>
             <label for="">Numero du Carte d'Identite National</label><br>
-            <input type="text" name="numCIN"><br>
+            <input type="text" name="numCIN"  value="{{$citoyens->numCIN}}"><br>
             <label for="">Email</label><br>
-            <input type="email" name="email"><br>
+            <input type="email" name="email"  value="{{$citoyens->email}}"><br>
             <label for="">Contact</label><br>
-            <input type="text" name="telephone">
+            <input type="text" name="telephone"   value="{{$citoyens->telephone}}">
             <br><br>
             <input type="submit" value="Modifier" name="modification" class="btn btn-primary">
         </form>

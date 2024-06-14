@@ -24,14 +24,14 @@ class CitoyenController extends Controller
             'adresse'=> 'required'
         ]);
 
-        $citoyen = new Citoyen();
+        $citoyen = new Citoyen(); 
         $citoyen -> nomCitoyen = $request->input('nomCitoyen');
         $citoyen -> prenomCitoyen = $request->input('prenomCitoyen');
         $citoyen -> email = $request->input('email');
         $citoyen -> numCIN = $request->input('numCIN');
         $citoyen -> telephone = $request->input('telephone');
         $citoyen -> adresse = $request->input('adresse');
-        $citoyen->save();
+        $citoyen     ->save();
         return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien enregistre");
 
     }
@@ -47,14 +47,30 @@ class CitoyenController extends Controller
     public function update_citoyen($id){
         //mise à jour citoyen miretourner interface formulaire avec donnée
         $citoyens = Citoyen::find($id);
-        return view('citoyen.update',[
+        return view('citoyen.modification',[
             'citoyens'=>$citoyens
         ]);
     }
 
-    public function update_citoyen_traitement($id,CitoyenRequest $request){
+    public function update_citoyen_traitement($id,Request $request){
         //traitement formulaire update
-       $citoyen = Citoyen::update($request->validate());
-       return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien modifiée");
+        $request->validate([
+        'nomCitoyen'=> 'required',
+        'prenomCitoyen' => 'required',
+        'email' => 'required',
+        'numCIN' => 'required',
+        'telephone' => 'required',
+        'adresse'=> 'required'
+    ]);
+    $citoyen = Citoyen::find($id);
+    $citoyen -> id;
+    $citoyen -> nomCitoyen = $request->input('nomCitoyen');
+    $citoyen -> prenomCitoyen = $request->input('prenomCitoyen');
+    $citoyen -> email = $request->input('email');
+    $citoyen -> numCIN = $request->input('numCIN');
+    $citoyen -> telephone = $request->input('telephone');
+    $citoyen -> adresse = $request->input('adresse');
+    $citoyen ->update();
+       return redirect()->route("listCitoyen")->with('Succée',"le citoyen a été bien modifiée");
     }
 }
