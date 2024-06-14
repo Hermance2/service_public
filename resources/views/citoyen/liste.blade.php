@@ -40,7 +40,7 @@
                     <td>{{$citoyen->telephone}}</td>
                     <td>{{$citoyen->adresse}}</td>
                     <td>
-                        <input type="button" value="Modifier" class="btn btn-primary">
+                        <a href="/citoyen/update/{{$citoyen->id}}"></a>
                         <input type="button" value="Supprimer" class="btn btn-danger">
                     </td>
                 </tr>

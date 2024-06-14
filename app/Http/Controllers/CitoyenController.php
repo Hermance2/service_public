@@ -31,7 +31,7 @@ class CitoyenController extends Controller
         $citoyen -> numCIN = $request->input('numCIN');
         $citoyen -> telephone = $request->input('telephone');
         $citoyen -> adresse = $request->input('adresse');
-        $citoyen->save();
+        $citoyen     ->save();
         return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien enregistre");
 
     }
@@ -52,9 +52,24 @@ class CitoyenController extends Controller
         ]);
     }
 
-    public function update_citoyen_traitement($id,CitoyenRequest $request){
+    public function update_citoyen_traitement($id,Request $request){
         //traitement formulaire update
-       $citoyen = Citoyen::update($request->validate());
+        $request->validate([
+        'nomCitoyen'=> 'required',
+        'prenomCitoyen' => 'required',
+        'email' => 'required',
+        'numCIN' => 'required',
+        'telephone' => 'required',
+        'adresse'=> 'required'
+    ]);
+    $citoyen = Citoyen::find($id);
+    $citoyen -> nomCitoyen = $request->input('nomCitoyen');
+    $citoyen -> prenomCitoyen = $request->input('prenomCitoyen');
+    $citoyen -> email = $request->input('email');
+    $citoyen -> numCIN = $request->input('numCIN');
+    $citoyen -> telephone = $request->input('telephone');
+    $citoyen -> adresse = $request->input('adresse');
+    $citoyen ->update();
        return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien modifiée");
     }
 }
