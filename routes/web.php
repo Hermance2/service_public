@@ -33,6 +33,12 @@ Route::get('SAP', function () {
 Route::get('/ActeDeNaissance', function () {
     return view('Acte_de_naissance/ActeDeNaissance');
 });
+Route::get('/Historique', function(){
+    return view('historique');
+});
+Route::get('/ListeCitoyens', function(){
+    return view('citoyen/liste');
+});
 //service
 Route::get('/service', [ServiceController::class, 'liste_service'])->name('listeService');
 //ajout 
