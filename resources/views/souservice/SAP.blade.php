@@ -68,6 +68,19 @@
             display: inline-block;
         }
 
+        select {
+            border-radius: 20px;
+            width: 200px;
+            display: inline-block;
+        }
+
+        #retour {
+            position: left;
+            margin-left: 1200px;
+            margin-bottom: 10px;
+            margin-top: -9px;
+        }
+
         #overflow {
             height: 460px;
             width: 1300px;
@@ -117,55 +130,51 @@
     </header>
 
     <section>
-        {{-- <nav>
-                <input type="button" value="Accueille"><br>
-                <input type="button" value="Service"><br>
-                <input type="button" value="Service"><br>
-                <input type="button" value="Service"><br>
-            </nav> --}}
         <article>
+            <a href="/"><input type="button" class="btn btn-primary" value="Retour" id="retour"></a>
             <section id="overflow" class="cards">
+
+                <h3>Service d'Adminisration Publique</h3>
+
                 <div class="card">
-                    <h4>Service d'aministration Publique</h4>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
-                    <a href="/SAP">
-                        <input type="button" value="Voir plus" class="btn btn-primary">
-                    </a>
+                    <h4>Service des collectivites Territoriales</h4>
+                    <p>Mairie</p>
+                    {{-- <select name="Mairie" id="choix">
+                        <option value="/ActeDeNaissance">Acte de naissance</option>
+                        <option value="valeur2">Acte de dece</option>
+                        <option value="valeur3">Acte de mariage et livret de famille</option>
+                    </select> --}}
+                    <ul id="liens">
+                        <li><a href="/ActeDeNaissance">Acte de Naissance</a></li>
+                        <li><a href="/ActeDeNaissance">Acte de dece</a></li>
+                        <li><a href="/ActeDeNaissance">Acte de mariage et livret de famille</a></li>
+                    </ul>
                 </div>
                 <div class="card">
-                    <h3>Service fiscaux</h3>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
-                    <a href="#">
-                        <input type="button" value="Voir plus" class="btn btn-primary">
-                    </a>
+                    <h3>Service de Securite et Deffense</h3>
+                    <p>Police et gendarmerie Nationale</p>
+                    <select name="Policemunicipal">
+                        <a href="#">
+                            <option value="valeur1">000000000</option>
+                        </a>
+                        <a href="#">
+                            <option value="valeur2">000000000</option>
+                        </a>
+                        <a href="#">
+                            <option value="valeur3">000000000</option>
+                        </a>
+                    </select>
+                    <ul id="liens"></ul>
                 </div>
                 <div class="card">
-                    <h3>Energie et Eau</h3>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
-                    <a href="#">
-                        <input type="button" value="Voir plus" class="btn btn-primary">
-                    </a>
-                </div>
-                <div class="card">
-                    <h3>Service de Deffense Nationale</h3>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
-                    <a href="#">
-                        <input type="button" value="Voir plus" class="btn btn-primary">
-                    </a>
-                </div>
-                <div class="card">
-                    <h3>Securite et Justice</h3>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
-                    <a href="#">
-                        <input type="button" value="Voir plus" class="btn btn-primary">
-                    </a>
-                </div>
-                <div class="card">
-                    <h3>Poste et telecommunication</h3>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
-                    <a href="#">
-                        <input type="button" value="Voir plus" class="btn btn-primary">
-                    </a>
+                    <h3>Service Publique Hospitalliere</h3>
+                    <p>Hopitaux Publics</p>
+                    <select name="Police municipal" id="choix">
+                        <option value="valeur1">000000000</option>
+                        <option value="valeur2">000000000</option>
+                        <option value="valeur3">000000000</option>
+                    </select>
+                    <ul id="liens"></ul>
                 </div>
             </section>
         </article>
