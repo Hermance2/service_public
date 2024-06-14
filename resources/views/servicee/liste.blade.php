@@ -29,10 +29,10 @@
             <tbody>
                 @foreach($services as $service)
                 <tr>
-                    <td>{{$service->service}}</td>
-                    <td>{{$service->services_id}}</td>
+                    <td>{{$service->nom_service}}</td>
+                    <td>{{$service->lieu}}</td>
                     <td>
-                        <input type="button" value="Modifier" class="btn btn-primary">
+                        <a href="/update/{{$service->id}}" class="btn btn-primary">Modifier</a>
                         <input type="button" value="Supprimer" class="btn btn-danger">
                     </td>
                 </tr>
