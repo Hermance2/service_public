@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('acceuil');
 });
 //service
-Route::get('/service',[ServiceController::class,'liste_service']);
+Route::get('/service',[ServiceController::class,'liste_service'])->name('listeService');
 //ajout 
 Route::get('/ajout',[ServiceController::class,'ajout_service']);
 //traitement
@@ -28,18 +28,18 @@ Route::post('/ajout/traitement',[ServiceController::class,'ajout_service_traitem
 
 
 //sousservice
-Route::get('/service/souService',[SouserviceController::class,'liste_sousservice']);
+Route::get('/service/souService',[SouserviceController::class,'liste_sousservice'])->name('listeSouservice');
 //ajout 
 Route::get('/service/souService/ajout',[SouserviceController::class,'ajout_sousservice']);
 //traitement
 Route::post('/service/souService/ajout/traitement',[SouserviceController::class,'ajout_sousservice_traitement']);
 
 //citoyen
-Route::get('/citoyen',[CitoyenController::class,'liste_sousservice']);
+Route::get('/citoyen',[CitoyenController::class,'liste_citoyen'])->name('listeCitoyen');
 //ajout 
-Route::get('/citoyen/ajout',[CitoyenController::class,'ajout_sousservice']);
+Route::get('/citoyen/ajout',[CitoyenController::class,'ajout_citoyen']);
 //traitement
-Route::post('/citoyen/ajout/traitement',[CitoyenController::class,'ajout_sousservice_traitement']);
+Route::post('/citoyen/ajout/traitement',[CitoyenController::class,'ajout_citoyen_traitement']);
 
 Route::get('/Connexion', function(){
     return view('Connexion');
