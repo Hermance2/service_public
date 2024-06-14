@@ -24,7 +24,7 @@ class CitoyenController extends Controller
         //liste de citoyen
         $citoyens = Citoyen::all();
         return view('citoyen.liste',[
-            'cytoyens' => $citoyens
+            'citoyens' => $citoyens
         ]);
     }
 }
