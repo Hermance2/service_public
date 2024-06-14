@@ -7,6 +7,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <style>
@@ -327,44 +329,28 @@
             </div>
         </div>
         <section class="section1">
-            <table class="tableau">
+            <table>
                 <thead>
                     <tr>
-                        <th class="th-nom">NOMS</th>
-                        <th>PRENOMS</th>
-                        <th>NUM CIN</th>
-                        <th class="th-sous-service">SOUS-SERVICES</th>
+                        <th>Nom du client</th>
+                        <th>Service</th>
+                        <th>Demandeur</th>
+                        <th>Date</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($variable as $key => $value)
                     <tr>
-                        <td>Ligne 1, Colonne 1</td>
-                        <td>Ligne 1, Colonne 2</td>
-                        <td>Ligne 1, Colonne 3</td>
-                        <td>Ligne 1, Colonne 4</td>
+                        <td>{{ $value->citoyens_id }}</td>
+                        <td>{{ $value->services_id }}</td>
+                        <td>{{ $value->nomdemandeur }}</td>
+                        <td>{{ $value->(date) }}</td>
+                        <td>{{ $value->(email) }}</td>
                     </tr>
-                    <tr>
-                        <td>Ligne 2, Colonne 1</td>
-                        <td>Ligne 2, Colonne 2</td>
-                        <td>Ligne 2, Colonne 3</td>
-                        <td>Ligne 2, Colonne 4</td>
-                    </tr>
-                    <tr>
-                        <td>Ligne 2, Colonne 1</td>
-                        <td>Ligne 2, Colonne 2</td>
-                        <td>Ligne 2, Colonne 3</td>
-                        <td>Ligne 2, Colonne 4</td>
-                    </tr>
-                    <tr>
-                        <td>Ligne 2, Colonne 1</td>
-                        <td>Ligne 2, Colonne 2</td>
-                        <td>Ligne 2, Colonne 3</td>
-                        <td>Ligne 2, Colonne 4</td>
-                    </tr>
-                    <!-- Ajoutez plus de lignes comme ci-dessus -->
+                    @endforeach
                 </tbody>
             </table>
-
         </section>
     </div>
 </body>
