@@ -35,9 +35,9 @@ Route::get('/service/souService/ajout',[SouserviceController::class,'ajout_souss
 Route::post('/service/souService/ajout/traitement',[SouserviceController::class,'ajout_sousservice_traitement']);
 
 //citoyen
-Route::get('/citoyen',[CitoyenController::class,'liste_sousservice']);
+Route::get('/citoyen',[CitoyenController::class,'liste_citoyen']);
 //ajout 
-Route::get('/citoyen/ajout',[CitoyenController::class,'ajout_sousservice']);
+Route::get('/citoyen/ajout',[CitoyenController::class,'ajout_citoyen']);
 //traitement
-Route::post('/citoyen/ajout/traitement',[CitoyenController::class,'ajout_sousservice_traitement']);
+Route::post('/citoyen/ajout/traitement',[CitoyenController::class,'ajout_citoyen_traitement']);
 
