@@ -25,10 +25,10 @@ class ActenaissController extends Controller
         $request->validate([
             'citoyens_id'=>['required'],
             'services_id' => ['required'],
-            'nomdece' => ['required'],
-            'prenomdece'=>['required'],
-            'datedece' => ['required'],
-            'lieu'=> ['required']
+            'nompersonne' => ['required'],
+            'prenompersonne'=>['required'],
+            'datenaiss' => ['required'],
+            'lieunaiss'=> ['required']
         ]);
 
         $actenaiss  = new actenaissance();
