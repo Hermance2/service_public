@@ -45,10 +45,10 @@
             text-align: center;
         }
 
-        input[type="submit"] {
+        input[type="submit"],[type="button"] {
             border-radius: 20px;
             box-shadow: 5px 10px 8px #888888;
-            width: 130px;
+            width: auto;
         }
 
     </style>
@@ -62,7 +62,8 @@
             <label for="">Mot de passe</label><br>
             <input type="password" name="pdw">
             <br><br>
-            <input type="submit" value="Se connecter" name="ajouter" class="btn btn-primary">
+            <input type="submit" value="Se connecter" name="ajouter" class="btn btn-success">
+            <a href="/citoyen/ajout"><input type="button" value="Creer un compte" name="nouveau" class="btn btn-primary"></a>
         </form>
     </div>
 </body>
