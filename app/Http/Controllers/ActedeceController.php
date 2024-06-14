@@ -37,6 +37,7 @@ class ActedeceController extends Controller
         $actedece ->datedece->$request->input('datedece');
         $actedece ->lieu->$request->input('lieu');
         $actedece->save();
+        return redirect()->route('/actedece')->with('Succée',"l'acte a été bien enregistre");
 
     }
     
@@ -65,5 +66,7 @@ class ActedeceController extends Controller
         $actedece ->datedece->$request->input('datedece');
         $actedece ->lieu->$request->input('lieu');
         $actedece->update();
+        return redirect()->route('/actedece')->with('Succée',"l'acte a été bien enregistre");
+
     }
 }
