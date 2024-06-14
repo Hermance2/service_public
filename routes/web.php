@@ -19,12 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('acceuil');
 });
-Route::get('/Connexion', function(){
-    return view('Connexion');
-});
-Route::get('/DashBoard', function(){
-    return view('DashBoard');
-});
 //service
 Route::get('/service',[ServiceController::class,'liste_service'])->name('listeService');
 //ajout 
@@ -34,7 +28,7 @@ Route::post('/ajout/traitement',[ServiceController::class,'ajout_service_traitem
 //update
 Route::get('/update/{id}',[ServiceController::class,'update_service']);
 //traitement update
-Route::get('/update/{id}-update',[ServiceController::class,'update_service_traitement']);
+Route::get('/update/{id}-update',[ServiceController::class,'update_service']);
 
 
 
@@ -62,4 +56,6 @@ Route::get('/citoyen/update/{id}',[CitoyenController::class,'update_citoyen']);
 //traitement update
 Route::post('/citoyen/update/{id}-traitement',[CitoyenController::class,'update_citoyen_traitement']);
 
-
+Route::get('/Connexion', function(){
+    return view('Connexion');
+});

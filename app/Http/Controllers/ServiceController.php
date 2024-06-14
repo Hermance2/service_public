@@ -41,7 +41,7 @@ class ServiceController extends Controller
     public function update_service($id){
         //traitement ny formulaire ajout 
         $services = Service::find($id);
-        return  view('servicee.update',[
+        return  view('servicee.modification',[
             'services'=>$services
         ]);
     }

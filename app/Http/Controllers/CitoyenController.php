@@ -24,7 +24,7 @@ class CitoyenController extends Controller
             'adresse'=> 'required'
         ]);
 
-        $citoyen = new Citoyen();
+        $citoyen = new Citoyen(); 
         $citoyen -> nomCitoyen = $request->input('nomCitoyen');
         $citoyen -> prenomCitoyen = $request->input('prenomCitoyen');
         $citoyen -> email = $request->input('email');
@@ -47,7 +47,7 @@ class CitoyenController extends Controller
     public function update_citoyen($id){
         //mise à jour citoyen miretourner interface formulaire avec donnée
         $citoyens = Citoyen::find($id);
-        return view('citoyen.update',[
+        return view('citoyen.modification',[
             'citoyens'=>$citoyens
         ]);
     }
@@ -63,6 +63,7 @@ class CitoyenController extends Controller
         'adresse'=> 'required'
     ]);
     $citoyen = Citoyen::find($id);
+    $citoyen -> id;
     $citoyen -> nomCitoyen = $request->input('nomCitoyen');
     $citoyen -> prenomCitoyen = $request->input('prenomCitoyen');
     $citoyen -> email = $request->input('email');
@@ -70,6 +71,6 @@ class CitoyenController extends Controller
     $citoyen -> telephone = $request->input('telephone');
     $citoyen -> adresse = $request->input('adresse');
     $citoyen ->update();
-       return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien modifiée");
+       return redirect()->route("listCitoyen")->with('Succée',"le citoyen a été bien modifiée");
     }
 }
