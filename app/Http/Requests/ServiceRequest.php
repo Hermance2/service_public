@@ -24,7 +24,7 @@ class ServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'service' =>['required'],
+            'nom_service' =>['required'],
             'lieu'=> ['required']
         ];
     }

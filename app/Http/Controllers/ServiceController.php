@@ -13,11 +13,25 @@ class ServiceController extends Controller
         return view('servicee.ajout');//micreer dossier service de 
     }
 
-    public function ajout_service_traitement(ServiceRequest $request){
-        //traitement ny formulaire ajout 
-        $service = Service::create($request->validated());
-        return redirect()->route('listeService')->with('Succée,la service a été bien enregistrer');
-    }
+    public function ajout_service_traitement(Request $request)
+{
+    // Validate the request
+    $request->validate([
+        'nom_service' => 'required',
+        'lieu' => 'required'
+    ]);
+
+    // Create a new service instance and assign the request values
+    $service = new Service();
+    $service->nom_service = $request->input('nom_service'); 
+    $service->lieu = $request->input('lieu');
+
+    $service->save();
+
+    // Redirect to the list service route with a success message
+    return redirect()->route('listeService')->with('success', 'Le service a été bien enregistré');
+}
+
 
     public function liste_service(){
         //liste nu service
