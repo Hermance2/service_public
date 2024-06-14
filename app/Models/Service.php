@@ -13,4 +13,8 @@ class Service extends Model
         'nom_service',
         'lieu'
     ];
+
+    public function acteDeces(){
+        return $this->hasMany(actedece::class, 'services_id');
+    }
 }

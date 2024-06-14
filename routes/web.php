@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActedeceController;
 use App\Http\Controllers\CitoyenController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SouserviceController;
@@ -59,3 +60,26 @@ Route::post('/citoyen/update/{id}-traitement',[CitoyenController::class,'update_
 Route::get('/Connexion', function(){
     return view('Connexion');
 });
+
+//actedece
+Route::get('/actenaissance',[ActedeceController::class,'liste_actenaissance']);
+//ajout 
+Route::get('/actenaissance/ajout',[ActedeceController::class,'ajout_actenaissance']);
+//traitement ajout
+Route::get('/actenaissance/ajout/traitement',[ActedeceController::class,'ajout_actenaissance_traitement']);
+//update
+Route::get('/actenaissance/update/{id}',[CitoyenController::class,'update_actenaissance']);
+//traitement update
+Route::post('/actenaissance/update/{id}-traitement',[CitoyenController::class,'update_actenaissance_traitement']);
+
+
+//actenaissance
+Route::get('/actedece',[ActedeceController::class,'liste_actedece']);
+//ajout 
+Route::get('/actedece/ajout',[ActedeceController::class,'ajout_actedece']);
+//traitement ajout
+Route::get('/actedece/ajout/traitement',[ActedeceController::class,'ajout_actedece_traitement']);
+//update
+Route::get('/actedece/update/{id}',[CitoyenController::class,'update_actedece']);
+//traitement update
+Route::post('/actedece/update/{id}-traitement',[CitoyenController::class,'update_actedece_traitement']);

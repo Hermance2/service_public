@@ -17,4 +17,8 @@ class Citoyen extends Model
         'telephone',
         'adresse',
     ];
+    public function acteDeces()
+    {
+        return $this->hasMany(actedece::class, 'citoyens_id');
+    }
 }
