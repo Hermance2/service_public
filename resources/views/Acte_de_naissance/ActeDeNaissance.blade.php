@@ -143,7 +143,7 @@
 
         <article>
             <div>
-                <form action="ajout/traitement" method="post">
+                <form action="/actenaissance/ajout/traitement" method="post">
                     @csrf
                     <h1>Veuillez entrer votre informations</h1>
                     <label for="">Le demandeur</label><br>
@@ -157,11 +157,11 @@
                     <label for="">Date de naissance</label><br>
                     <input type="date" name="datenaissance"><br>
                     <label for="">Lieu de naissance</label><br>
-                    <input type="text" name="lielieunaissanc"><br>
+                    <input type="text" name="lieunaissance"><br>
                     <label for="">Nom de la mere</label><br>
-                    <input type="text" name="nomdemandeur"><br>
+                    <input type="text" name="mere"><br>
                     <label for="">Nom du pere </label><br>
-                    <input type="text" name="nomdemandeur"><br>
+                    <input type="text" name="pere"><br>
                     <label for="">Motif du demande</label><br>
                     <textarea class="form-control" rows="5" name="motif"></textarea><br>
                     <br><br>
