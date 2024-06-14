@@ -11,8 +11,9 @@
         body {
             background-image: linear-gradient(skyblue, blue);
             background-size: cover;
-            background-repeat: no-repeat; 
+            background-repeat: no-repeat;
         }
+
         form {
             background-color: white;
             background-repeat: no-repeat;
@@ -23,7 +24,7 @@
             justify-content: center;
             display: inline;
             align-items: center;
-            height: 350px;
+            height: auto;
             width: 450px;
             padding: 30px;
         }
@@ -35,7 +36,9 @@
             margin-top: 100px;
         }
 
-        input[type="text"] {
+        input[type="text"],
+        [type="password"],
+        [type="email"] {
             width: 400px;
             height: auto;
             border-radius: 10px;
@@ -43,7 +46,7 @@
             text-align: center;
         }
 
-        input[type="submit"] {
+        input[type="submit"], [type="button"] {
             border-radius: 10px;
             box-shadow: 5px 5px 8px #888888;
             width: 130px;
@@ -67,9 +70,12 @@
             <label for="">Email</label><br>
             <input type="email" name="email"><br>
             <label for="">Contact</label><br>
-            <input type="text" name="telephone">
+            <input type="text" name="telephone"><br>
+            <label for="">Mot de passe</label><br>
+            <input type="password" name="pdw">
             <br><br>
-            <input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-primary">
+            <input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-success">
+            <a href="/Connexion"><input type="button" value="Retour" class="btn btn-primary"></a>
         </form>
     </div>
 </body>
