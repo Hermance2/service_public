@@ -24,7 +24,8 @@ class SouserviceRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            'service' =>['required'],
+            'services_id'=>['required']
         ];
     }
 }

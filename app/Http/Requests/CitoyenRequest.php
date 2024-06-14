@@ -24,7 +24,12 @@ class CitoyenRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nomCitoyen' => ['required'],
+            'prenomCitoyen'=> ['required'],
+            'email'=> ['required'],
+            'numCIN'=> ['required','unique','numeric'],
+            'telephone'=> ['required','numeric','max:15'],
+            'adresse'=> ['required']
         ];
     }
 }
