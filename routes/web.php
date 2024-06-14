@@ -79,7 +79,7 @@ Route::get('/actenaissance', [ActenaissController::class, 'liste_actenaissance']
 //ajout 
 Route::get('/actenaissance/ajout', [ActenaissController::class, 'ajout_actenaissance']);
 //traitement ajout
-Route::get('/actenaissance/ajout/traitement', [ActenaissController::class, 'ajout_actenaissance_traitement']);
+Route::post('/actenaissance/ajout/traitement', [ActenaissController::class, 'ajout_actenaissance_traitement']);
 //update
 Route::get('/actenaissance/update/{id}', [ActenaissController::class, 'update_actenaissance']);
 //traitement update

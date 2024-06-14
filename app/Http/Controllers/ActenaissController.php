@@ -12,14 +12,14 @@ class ActenaissController extends Controller
     {
         $actenaiss = actenaissance::with(['citoyen', 'service'])->get();
 
-        return view('actedece.liste', [
-            'actesDeces' => $actenaiss
+        return view('Acte_de_naissance.liste', [
+            'actenaiss' => $actenaiss
         ]);
     }
 
     public function ajout_actenaissance()
     {
-        return view('actenaissance.ajout');
+        return view('Acte_de_naissance.ActeDeNaissance');
     }
 
 
@@ -31,24 +31,24 @@ class ActenaissController extends Controller
             'nomdemandeur' => ['required'],
             'prenomdemandeur' => ['required'],
             'datenaissance' => ['required'],
-            'lieunaissancance' => ['required'],
+            'lieunaissance' => ['required'],
             'mere' => ['required'],
             'pere' => ['required'],
             'motif' => ['required'],
         ]);
 
         $actenaiss  = new actenaissance();
-        $actenaiss->citoyens_id->$request->input('citoyens_id');
-        $actenaiss->services_id->$request->input('services_id');
-        $actenaiss->nomdemandeur->$request->input('nomdemandeur');
-        $actenaiss->prenomdemandeur->$request->input('prenomdemandeur');
-        $actenaiss->datenaissance->$request->input('datenaissance');
-        $actenaiss->lieunaissancance->$request->input('lieunaissancance');
-        $actenaiss->mere->$request->input('mere');
-        $actenaiss->pere->$request->input('pere');
-        $actenaiss->motif->$request->input('motif');
+        $actenaiss->citoyens_id = $request->input('citoyens_id');
+        $actenaiss->services_id = $request->input('services_id');
+        $actenaiss->nomdemandeur = $request->input('nomdemandeur');
+        $actenaiss->prenomdemandeur = $request->input('prenomdemandeur');
+        $actenaiss->datenaissance = $request->input('datenaissance');
+        $actenaiss->lieunaissance = $request->input('lieunaissance');
+        $actenaiss->mere = $request->input('mere');
+        $actenaiss->pere =$request->input('pere');
+        $actenaiss->motif = $request->input('motif');
         $actenaiss->save();
-        return redirect()->route('/actedece')->with('Succée', "l'acte a été bien enregistre");
+        return redirect()->route('/actenaissance')->with('Succée', "l'acte a été bien enregistre");
     }
 
 
