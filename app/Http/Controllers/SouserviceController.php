@@ -30,4 +30,19 @@ class SouserviceController extends Controller
             'souservices' => $souservices
         ]);
     }
+
+    public function update_sousservice($id){
+        //mise à jour sous service miretourner interface formulaire avec donnée
+        $souservices = Souservice::find($id);
+        return view('souservice.update',[
+            'souservice' => $souservices
+        ]);
+    }
+
+    public function update_sousservice_traitement($id,SouserviceRequest $request){
+        //traitement formulaire update
+        $souservice = Souservice::update($request->validated());
+        return redirect()->route('listeSouservice')->with('Succée','la sous-service a été bien modifiée');
+    }
+
 }
