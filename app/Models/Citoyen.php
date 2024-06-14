@@ -15,6 +15,6 @@ class Citoyen extends Model
         'email',
         'numCIN',
         'telephone',
-        'adresse'
+        'adresse',
     ];
 }

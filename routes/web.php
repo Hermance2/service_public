@@ -19,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('acceuil');
 });
+Route::get('/Connexion', function(){
+    return view('Connexion');
+});
+Route::get('/DashBoard', function(){
+    return view('DashBoard');
+});
 //service
 Route::get('/service',[ServiceController::class,'liste_service'])->name('listeService');
 //ajout 
@@ -56,6 +62,4 @@ Route::get('/citoyen/update/{id}',[CitoyenController::class,'update_citoyen']);
 //traitement update
 Route::post('/citoyen/update/{id}-traitement',[CitoyenController::class,'update_citoyen_traitement']);
 
-Route::get('/Connexion', function(){
-    return view('Connexion');
-});
+

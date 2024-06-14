@@ -26,22 +26,6 @@
             height: 100px;
         }
 
-            {
-                {
-                --
-                /*nav {
-                float: left;
-                width: 20%;
-                height: 480px;
-                background: #ccc;
-                padding: 20px;
-                background-color: rgb(236, 221, 221);
-                padding: 0;
-            }*/
-                --
-            }
-        }
-
         article {
             float: left;
             padding: 20px;
@@ -74,11 +58,14 @@
             width: 250px;
             height: 350px;
             border-radius: 20px;
+            display: flex;
+            align-items: flex-end;
         }
 
         input[type="button"] {
             border-radius: 20px;
             width: auto;
+            display: inline-block;
         }
 
         #overflow {

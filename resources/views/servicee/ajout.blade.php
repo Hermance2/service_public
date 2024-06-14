@@ -54,6 +54,7 @@
 <body>
     <div>
         <form action="ajout/traitement" method="post">
+            @csrf
             <h1>Ajouter une nouvelle service</h1>
             <label for="">Nom du service</label><br>
             <input type="text" name="service"><br>

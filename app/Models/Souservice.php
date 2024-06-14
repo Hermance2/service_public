@@ -10,6 +10,6 @@ class Souservice extends Model
     use HasFactory;
     protected $fillable = [
         'service',
-        'services_id'
+        'services_id',
     ];
 }
