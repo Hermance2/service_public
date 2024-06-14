@@ -27,4 +27,18 @@ class CitoyenController extends Controller
             'citoyens' => $citoyens
         ]);
     }
+
+    public function update_citoyen($id){
+        //mise à jour citoyen miretourner interface formulaire avec donnée
+        $citoyens = Citoyen::find($id);
+        return view('citoyen.update',[
+            'citoyens'=>$citoyens
+        ]);
+    }
+
+    public function update_citoyen_traitement($id,CitoyenRequest $request){
+        //traitement formulaire update
+       $citoyen = Citoyen::update($request->validate());
+       return redirect()->route("listeCitoyen")->with('Succée',"le citoyen a été bien modifiée");
+    }
 }

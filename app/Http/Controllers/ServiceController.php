@@ -28,4 +28,17 @@ class ServiceController extends Controller
         
     }
 
+    public function update_service($id){
+        //traitement ny formulaire ajout 
+        $services = Service::find($id);
+        return  view('servicee.update',[
+            'services'=>$services
+        ]);
+    }
+    
+    public function update_citoyen_traitement($id,ServiceRequest $request){
+        //traitement formulaire update
+        $service = Service::update($request->validate());
+        return redirect()->route('listeService')->with('Succée,la service a été bien modifiée');
+    }
 }
