@@ -53,12 +53,20 @@
 </head>
 <body>
     <div>
-        <form action="ajout/traitement" method="post">
+        <form action="/ajout/traitement" method="post">
+            @csrf
             <h1>Ajouter une nouvelle service</h1>
             <label for="">Nom du service</label><br>
-            <input type="text" name="service"><br>
+            <input type="text" name="nom_service">
+            @error('nom_service')
+                {{$message}}
+            @enderror
+            <br>
             <label for="">Lieu</label><br>
             <input type="text" name="lieu">
+            @error('nom_service')
+                {{$message}}
+            @enderror
             <br><br>
             <input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-primary">
         </form>
