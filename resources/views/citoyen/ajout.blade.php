@@ -54,6 +54,18 @@
         }
 
     </style>
+
+    <script>
+        function validateForm() {
+            var pwd1 = document.forms["registrationForm"]["pdw1"].value;
+            var pwd2 = document.forms["registrationForm"]["pdw2"].value;
+            if (pwd1 !== pwd2) {
+                alert("Les mots de passe ne correspondent pas. Veuillez réessayer.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <div>
@@ -73,7 +85,9 @@
             <label for="">Contact</label><br>
             <input type="text" name="telephone"><br>
             <label for="">Mot de passe</label><br>
-            <input type="password" name="pdw">
+            <input type="password" name="pdw1" required><br>
+            <label for="">Confirmer votre mot de passe</label><br>
+            <input type="password" name="pdw2" required>
             <br><br>
             <a href="/Connexion"><input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-success"></a>
             <a href="/Connexion"><input type="button" value="Retour" class="btn btn-primary"></a>
