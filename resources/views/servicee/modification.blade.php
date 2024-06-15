@@ -41,7 +41,6 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 5px 5px 8px #888888;
-            text-align: center;
         }
 
         input[type="submit"] [type="button"] {
