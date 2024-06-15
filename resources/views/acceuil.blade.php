@@ -127,7 +127,7 @@
             <section id="overflow" class="cards">
                 <div class="card">
                     <h4>Service d'aministration Publique</h4>
-                    <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
+                    <p>Voici la description du service <br>-Procedure a suivre <br>-Etape a suivre</p>
                     <a href="/SAP">
                         <input type="button" value="Voir plus" class="btn btn-primary">
                     </a>
