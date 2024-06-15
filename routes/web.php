@@ -39,6 +39,12 @@ Route::get('/Historique', function(){
 Route::get('/ListeCitoyens', function(){
     return view('citoyen/liste');
 });
+Route::get('/ActeDeDeces', function(){
+    return view('/Acte_de_deces/ActeDeDeces');
+});
+Route::get('/ConnexionAdmin', function(){
+    return view('ConnexionAdmin');
+});
 //service
 Route::get('/service', [ServiceController::class, 'liste_service'])->name('listeService');
 //ajout 
