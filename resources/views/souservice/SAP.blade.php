@@ -76,6 +76,12 @@
 
         #retour {
             position: left;
+            margin-right: 1200px;
+            margin-bottom: 10px;
+            margin-top: -9px;
+        }
+        #profil {
+            position: right;
             margin-left: 1200px;
             margin-bottom: 10px;
             margin-top: -9px;
@@ -132,6 +138,7 @@
     <section>
         <article>
             <a href="/"><input type="button" class="btn btn-primary" value="Retour" id="retour"></a>
+            {{-- <a href="/Profil"><input type="button" class="btn btn-success " value="Voir mon profil" id="profil"></a> --}}
             <section id="overflow" class="cards">
 
                 <h3>Service d'Adminisration Publique</h3>
