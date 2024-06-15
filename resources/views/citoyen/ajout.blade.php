@@ -89,7 +89,7 @@
             <label for="">Confirmer votre mot de passe</label><br>
             <input type="password" name="pdw2" required>
             <br><br>
-            <a href="/Connexion"><input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-success"></a>
+            <a href="/SAP"><input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-success"></a>
             <a href="/Connexion"><input type="button" value="Retour" class="btn btn-primary"></a>
         </form>
     </div>

@@ -350,7 +350,7 @@
                             <td>{{$citoyen->telephone}}</td>
                             <td>{{$citoyen->adresse}}</td>
                             <td>
-                                <a href="/citoyen/update/{{$citoyen->id}}" class="btn btn-primary">Modifier</a>
+                                <a href="/citoyen/update/{{$citoyen->id}}"><input type="button" class="btn btn-primary" value="Modifier"></a>
                                 <input type="button" value="Supprimer" class="btn btn-danger">
                             </td>
                         </tr>
