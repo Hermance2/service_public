@@ -141,8 +141,8 @@
                     <p>Mairie</p>
                     <ul id="liens">
                         <li><a href="/Connexion">Acte de Naissance</a></li>
-                        <li><a href="/ActeDeNaissance">Acte de dece</a></li>
-                        <li><a href="/ActeDeNaissance">Acte de mariage et livret de famille</a></li>
+                        <li><a href="/ActeDeDeces">Acte de dece</a></li>
+                        <li><a href="/Connexion">Acte de mariage et livret de famille</a></li>
                     </ul>
                 </div>
                 <div class="card">
