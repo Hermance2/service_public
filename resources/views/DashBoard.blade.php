@@ -322,42 +322,42 @@
         <section class="cards">
             <div class="card">
                 <h3>Service d'aministration Publique</h3>
-                <p>Voici la description du service <br><br> -Procedure a suivre <br> -Etape a suivre </p>
+                <p>-Procedure a suivre <br> -Etape a suivre </p>
                 <a href="/SAP">
                     <input type="button" value="Voir plus" class="btn btn-primary">
                 </a>
             </div>
             <div class="card">
                 <h3>Service fiscaux</h3>
-                <p>Voici la description du service <br><br> -Procedure a suivre <br> -Etape a suivre </p>
+                <p>-Procedure a suivre <br> -Etape a suivre </p>
                 <a href="#">
                     <input type="button" value="Voir plus" class="btn btn-primary1">
                 </a>
             </div>
             <div class="card">
                 <h3>Energie et Eau</h3>
-                <p>Voici la description du service <br> -Procedure a suivre <br> -Etape a suivre </p>
+                <p>-Procedure a suivre <br> -Etape a suivre </p>
                 <a href="#">
                     <input type="button" value="Voir plus" class="btn btn-primary3">
                 </a>
             </div>
             <div class="card">
                 <h3>Service de Deffense Nationale</h3>
-                <p>Voici la description du service <br><br> -Procedure a suivre <br> -Etape a suivre </p>
+                <p>-Procedure a suivre <br> -Etape a suivre </p>
                 <a href="#">
                     <input type="button" value="Voir plus" class="btn btn-primary">
                 </a>
             </div>
             <div class="card">
                 <h3>Securite et Justice</h3>
-                <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
+                <p>-Procedure a suivre <br> -Etape a suivre </p>
                 <a href="#">
                     <input type="button" value="Voir plus" class="btn btn-primary4">
                 </a>
             </div>
             <div class="card">
                 <h3>Poste et telecommunication</h3>
-                <p>Voici la description du service <br>-Procedure a suivre <br> -Etape a suivre </p>
+                <p>-Procedure a suivre <br> -Etape a suivre </p>
                 <a href="#">
                     <input type="button" value="Voir plus" class="btn btn-primary5">
                 </a>
