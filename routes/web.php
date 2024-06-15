@@ -57,6 +57,9 @@ Route::get('/', function(){
 Route::get('/ConnexionAdmin', function(){
     return view('ConnexionAdmin');
 });
+Route::post('/ConnexionAdmin', function(){
+    return view('DashBoard');
+});
 //service
 Route::get('/service', [ServiceController::class, 'liste_service'])->name('listeService');
 //ajout 

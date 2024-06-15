@@ -327,7 +327,7 @@
         </div>
         <section class="section1">
             <div>
-                <table class="table table-hover" id="overflow">
+                <table class="table table-hover" Id="overflow">
                     <thead>
                         <tr>
                             <th>Nom</th>
@@ -342,26 +342,26 @@
                     <tbody>
                         @foreach($citoyens as $citoyen)
                         <tr>
-                            <td>{{ $citoyen->nomCitoyen }}</td>
-                            <td>{{ $citoyen->prenomCitoyen }}</td>
-                            <td>{{ $citoyen->email }}</td>
-                            <td>{{ $citoyen->numCIN }}</td>
-                            <td>{{ $citoyen->telephone }}</td>
-                            <td>{{ $citoyen->adresse }}</td>
+                            <td>{{$citoyen->nomCitoyen}}</td>
+                            <td>{{$citoyen->prenomCitoyen}}</td>
+                            <td>{{$citoyen->email}}</td>
+                            <td>{{$citoyen->numCIN}}</td>
+                            <td>{{$citoyen->telephone}}</td>
+                            <td>{{$citoyen->adresse}}</td>
                             <td>
-                                <a href="{{ url('/citoyen/update/' . $citoyen->id) }}" class="btn btn-primary">Modifier</a>
+                                <a href="/citoyen/update/{{$citoyen->id}}" >
+                                    <button class="btn btn-primary">Modifier</button>
+                                </a>
+                                <a href="">
+                                    <button class="btn btn-primary">supprimer</button>
+                                </a>
                                 
-                                <form action="{{ url('/citoyen/delete/' . $citoyen->id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                </form>
+
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                
             </div>
         </section>
     </div>
