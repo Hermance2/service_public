@@ -51,6 +51,9 @@ Route::get('/ListeCitoyens', function(){
 Route::get('/ActeDeDeces', function(){
     return view('/Acte_de_deces/ActeDeDeces');
 });
+Route::get('/', function(){
+    return view('acceuil');
+});
 Route::get('/ConnexionAdmin', function(){
     return view('ConnexionAdmin');
 });
