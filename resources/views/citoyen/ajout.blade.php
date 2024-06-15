@@ -20,7 +20,7 @@
             background-size: cover;
             box-shadow: 5px 5px 8px #888888;
             width: auto;
-            border-radius: 10px;
+            border-radius: 5px;
             justify-content: center;
             display: inline;
             align-items: center;
@@ -41,14 +41,14 @@
         [type="email"] {
             width: 400px;
             height: auto;
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 5px 5px 8px #888888;
             text-align: center;
         }
 
         input[type="submit"],
         [type="button"] {
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 5px 5px 8px #888888;
             width: 130px;
         }

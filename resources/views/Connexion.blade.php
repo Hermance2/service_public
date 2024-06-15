@@ -40,15 +40,15 @@
         [type="password"] {
             width: 400px;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 5px 10px 8px #888888;
+            border-radius: 5px;
+            box-shadow: 5px 5px 8px #888888;
             text-align: center;
         }
 
         input[type="submit"],
         [type="button"] {
-            border-radius: 20px;
-            box-shadow: 5px 10px 8px #888888;
+            border-radius: 5px;
+            box-shadow: 5px 5px 8px #888888;
             width: auto;
         }
 

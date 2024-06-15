@@ -139,11 +139,6 @@
                 <div class="card">
                     <h4>Service des collectivites Territoriales</h4>
                     <p>Mairie</p>
-                    {{-- <select name="Mairie" id="choix">
-                        <option value="/ActeDeNaissance">Acte de naissance</option>
-                        <option value="valeur2">Acte de dece</option>
-                        <option value="valeur3">Acte de mariage et livret de famille</option>
-                    </select> --}}
                     <ul id="liens">
                         <li><a href="/Connexion">Acte de Naissance</a></li>
                         <li><a href="/ActeDeNaissance">Acte de dece</a></li>
@@ -153,28 +148,22 @@
                 <div class="card">
                     <h3>Service de Securite et Deffense</h3>
                     <p>Police et gendarmerie Nationale</p>
-                    <select name="Policemunicipal">
+                    <ul>
                         <a href="#">
-                            <option value="valeur1">000000000</option>
+                            <li>Surveillance de l'espace Public</li>
                         </a>
                         <a href="#">
-                            <option value="valeur2">000000000</option>
+                            <li>L'Accueille du Public </li>
                         </a>
-                        <a href="#">
-                            <option value="valeur3">000000000</option>
-                        </a>
-                    </select>
-                    <ul id="liens"></ul>
+                    </ul>
                 </div>
                 <div class="card">
                     <h3>Service Publique Hospitalliere</h3>
                     <p>Hopitaux Publics</p>
-                    <select name="Police municipal" id="choix">
-                        <option value="valeur1">000000000</option>
-                        <option value="valeur2">000000000</option>
-                        <option value="valeur3">000000000</option>
-                    </select>
-                    <ul id="liens"></ul>
+                    <ul>
+                        <a href="#"><li>Medecine penitentiaire</li></a>
+                        <a href="#"><li>A la recherche...</li></a>
+                    </ul>
                 </div>
             </section>
         </article>
