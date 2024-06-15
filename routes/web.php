@@ -49,6 +49,10 @@ Route::get('/ActeDeDeces', function(){
 Route::get('/ConnexionAdmin', function(){
     return view('ConnexionAdmin');
 });
+Route::get('/Profil', function(){
+    return view('/Profil');
+});
+
 //service
 Route::get('/service', [ServiceController::class, 'liste_service'])->name('listeService');
 //ajout 
@@ -59,9 +63,6 @@ Route::post('/ajout/traitement', [ServiceController::class, 'ajout_service_trait
 Route::get('/update/{id}', [ServiceController::class, 'update_service']);
 //traitement update
 Route::get('/update/{id}-update', [ServiceController::class, 'update_service']);
-
-
-
 
 //sousservice
 Route::get('/service/souService', [SouserviceController::class, 'liste_sousservice'])->name('listeSouservice');
