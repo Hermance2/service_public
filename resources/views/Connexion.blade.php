@@ -63,7 +63,7 @@
             <label for="">Votre nom</label><br>
             <input type="text" name="nom" required><br>
             <label for="">Mot de passe</label><br>
-            <input type="password" name="pdw" required>
+            <input type="password" name="pdw" >
             <br><br>
             <input type="submit" value="Se connecter" name="ajouter" class="btn btn-success">
             <a href="/citoyen/ajout"><input type="button" value="Creer un compte" name="nouveau" class="btn btn-primary"></a>
