@@ -40,27 +40,30 @@
         [type="password"] {
             width: 400px;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 5px 10px 8px #888888;
+            border-radius: 5px;
+            box-shadow: 5px 5px 8px #888888;
             text-align: center;
         }
 
-        input[type="submit"],[type="button"] {
-            border-radius: 20px;
-            box-shadow: 5px 10px 8px #888888;
+        input[type="submit"],
+        [type="button"] {
+            border-radius: 5px;
+            box-shadow: 5px 5px 8px #888888;
             width: auto;
         }
 
     </style>
 </head>
 <body>
+    <a href="/SAP"><input type="button" value="Retour" class="btn btn-primary"></a>
     <div>
         <form action="" method="post">
+        @csrf
             <h1>Se connecter</h1>
             <label for="">Votre nom</label><br>
-            <input type="text" name="nom"><br>
+            <input type="text" name="nom" required><br>
             <label for="">Mot de passe</label><br>
-            <input type="password" name="pdw">
+            <input type="password" name="pdw" required>
             <br><br>
             <input type="submit" value="Se connecter" name="ajouter" class="btn btn-success">
             <a href="/citoyen/ajout"><input type="button" value="Creer un compte" name="nouveau" class="btn btn-primary"></a>

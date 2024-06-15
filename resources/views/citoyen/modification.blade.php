@@ -70,6 +70,7 @@
             <input type="text" name="telephone"   value="{{$citoyens->telephone}}">
             <br><br>
             <input type="submit" value="Modifier" name="modification" class="btn btn-primary">
+            <a href=""><input type="button" value="Retour" class="btn btn-primary"></a>
         </form>
     </div>
 </body>

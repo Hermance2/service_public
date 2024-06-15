@@ -26,7 +26,7 @@ Route::get('/', function () {
     return view('acceuil');
 });
 Route::get('/Connexion', function () {
-    return view('Connexion');
+    return view('/Connexion');
 });
 Route::get('/DashBoard', function () {
     return view('DashBoard');
