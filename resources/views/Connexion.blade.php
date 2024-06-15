@@ -57,7 +57,7 @@
 <body>
     <a href="/SAP"><input type="button" value="Retour" class="btn btn-primary"></a>
     <div>
-        <form action="" method="post">
+        <form action="{{url('/citoyen/ajout')}}" method="post">
         @csrf
             <h1>Se connecter</h1>
             <label for="">Votre nom</label><br>
@@ -66,7 +66,7 @@
             <input type="password" name="pdw" >
             <br><br>
             <input type="submit" value="Se connecter" name="ajouter" class="btn btn-success">
-            <a href="/citoyen/ajout"><input type="button" value="Creer un compte" name="nouveau" class="btn btn-primary"></a>
+            <a href="{{url('/citoyen/ajout')}}"><input type="button" value="Creer un compte" name="nouveau" class="btn btn-primary"></a>
         </form>
     </div>
 </body>

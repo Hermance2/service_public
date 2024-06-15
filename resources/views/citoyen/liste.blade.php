@@ -327,15 +327,14 @@
         </div>
         <section class="section1">
             <div>
-                <table class="table table-hover" Id="overflow">
+                <table class="table table-hover" id="overflow">
                     <thead>
                         <tr>
                             <th>Nom</th>
                             <th>Prenom</th>
-                            <th>Adresse</th>
+                            <th>E-mail</th>
                             <th>CIN</th>
-                            <th>Email</th>
-                            <th>Contact</th>
+                            <th>Téléphone</th>
                             <th>Adresse</th>
                             <th>Operation</th>
                         </tr>
@@ -343,20 +342,31 @@
                     <tbody>
                         @foreach($citoyens as $citoyen)
                         <tr>
-                            <td>{{$citoyen->nomCitoyen}}</td>
-                            <td>{{$citoyen->prenomCitoyen}}</td>
-                            <td>{{$citoyen->email}}</td>
-                            <td>{{$citoyen->numCIN}}</td>
-                            <td>{{$citoyen->telephone}}</td>
-                            <td>{{$citoyen->adresse}}</td>
+                            <td>{{ $citoyen->nomCitoyen }}</td>
+                            <td>{{ $citoyen->prenomCitoyen }}</td>
+                            <td>{{ $citoyen->email }}</td>
+                            <td>{{ $citoyen->numCIN }}</td>
+                            <td>{{ $citoyen->telephone }}</td>
+                            <td>{{ $citoyen->adresse }}</td>
                             <td>
+<<<<<<< HEAD
                                 <a href="/citoyen/update/{{$citoyen->id}}"><input type="button" class="btn btn-primary" value="Modifier"></a>
                                 <input type="button" value="Supprimer" class="btn btn-danger">
+=======
+                                <a href="{{ url('/citoyen/update/' . $citoyen->id) }}" class="btn btn-primary">Modifier</a>
+                                
+                                <form action="{{ url('/citoyen/delete/' . $citoyen->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                                </form>
+>>>>>>> 3dde308ba0de12ec29ab6f83c7c9da4b846c9b81
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
+                
             </div>
         </section>
     </div>
