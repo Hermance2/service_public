@@ -334,19 +334,20 @@
                     <tr>
                         <th>Nom du client</th>
                         <th>Service</th>
-                        <th>Demandeur</th>
+                        <th>Demandeur   (pour)</th>
                         <th>Date</th>
                         <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($variable as $key => $value)
+                    @foreach($actenaiss as $actenais)
                     <tr>
-                        <td>{{ $value->citoyens_id }}</td>
-                        <td>{{ $value->services_id }}</td>
-                        <td>{{ $value->nomdemandeur }}</td>
-                        <td>{{ $value->(date) }}</td>
-                        <td>{{ $value->(email) }}</td>
+                        <td>{{ $actenais->citoyen->nomCitoyen }} <br> {{ $actenais->citoyen->prenomCitoyen }} 
+                        </td>
+                        <td>{{ $actenais->service->nom_service }}</td>
+                        <td>{{ $actenais->prenomdemandeur }}</td>
+                        <td>{{ $actenais->created_at->format('d-m-Y H:i:s') }}</td>
+                        <td>{{ $actenais->citoyen->email }}</td>
                     </tr>
                     @endforeach
                 </tbody>

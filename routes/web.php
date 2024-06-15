@@ -3,8 +3,12 @@
 use App\Http\Controllers\ActedeceController;
 use App\Http\Controllers\ActenaissController;
 use App\Http\Controllers\CitoyenController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SouserviceController;
+use App\Mail\HelloMail;
+use App\Mail\testMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -108,3 +112,10 @@ Route::get('/actedece/ajout/traitement', [ActedeceController::class, 'ajout_acte
 Route::get('/actedece/update/{id}', [CitoyenController::class, 'update_actedece']);
 //traitement update
 Route::post('/actedece/update/{id}-traitement', [CitoyenController::class, 'update_actedece_traitement']);
+
+
+
+Route::get('/sendMail',function(){
+    Mail::to("hermancerandria@gmail.com")->send(new HelloMail());
+    return "Email sent successfully!";
+});

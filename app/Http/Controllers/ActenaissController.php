@@ -12,7 +12,7 @@ class ActenaissController extends Controller
     {
         $actenaiss = actenaissance::with(['citoyen', 'service'])->get();
 
-        return view('Acte_de_naissance.liste', [
+        return view('Historique', [
             'actenaiss' => $actenaiss
         ]);
     }
