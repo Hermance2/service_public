@@ -349,7 +349,6 @@
                             <td>{{$citoyen->telephone}}</td>
                             <td>{{$citoyen->adresse}}</td>
                             <td>
-<<<<<<< HEAD
                                 <a href="/citoyen/update/{{$citoyen->id}}" >
                                     <button class="btn btn-primary">Modifier</button>
                                 </a>
@@ -358,20 +357,6 @@
                                 </a>
                                 
 
-=======
-<<<<<<< HEAD
-                                <a href="/citoyen/update/{{$citoyen->id}}"><input type="button" class="btn btn-primary" value="Modifier"></a>
-                                <input type="button" value="Supprimer" class="btn btn-danger">
-=======
-                                <a href="{{ url('/citoyen/update/' . $citoyen->id) }}" class="btn btn-primary">Modifier</a>
-                                
-                                <form action="{{ url('/citoyen/delete/' . $citoyen->id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                </form>
->>>>>>> 3dde308ba0de12ec29ab6f83c7c9da4b846c9b81
->>>>>>> cf5bed80a1efb6906659324d3db1b4b8fd74e24c
                             </td>
                         </tr>
                         @endforeach
