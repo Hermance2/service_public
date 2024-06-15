@@ -24,7 +24,7 @@
             justify-content: center;
             display: inline;
             align-items: center;
-            height: 370px;
+            height: 400px;
             width: 450px;
             padding: 30px;
         }
@@ -39,10 +39,10 @@
         input[type="text"],
         [type="password"], [type="email"] {
             width: 400px;
-            height: auto;
+            height: 50px;
             border-radius: 5px;
             box-shadow: 5px 5px 8px #888888;
-            text-align: center;
+            
         }
 
         input[type="submit"],
@@ -57,9 +57,9 @@
 <body>
     <a href="/SAP"><input type="button" value="Retour" class="btn btn-primary"></a>
     <div>
-        <form action="" method="post">
+        <form action="{{url('/register')}}" method="post">
             @csrf
-            <h1>Se connecter en tant qu' Administrateur</h1>
+            <h1>Admin Athentification</h1>
             <label for="">Login</label><br>
             <input type="text" name="nom" required><br>
             <label for="">Email</label><br>

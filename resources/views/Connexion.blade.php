@@ -24,7 +24,7 @@
             justify-content: center;
             display: inline;
             align-items: center;
-            height: 300px;
+            height: 350px;
             width: 450px;
             padding: 30px;
         }
@@ -39,10 +39,10 @@
         input[type="text"],
         [type="password"] {
             width: 400px;
-            height: auto;
+            height: 50px;
             border-radius: 5px;
             box-shadow: 5px 5px 8px #888888;
-            text-align: center;
+            
         }
 
         input[type="submit"],
