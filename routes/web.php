@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\ActedeceController;
 use App\Http\Controllers\ActenaissController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CitoyenController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SouserviceController;
 use App\Mail\HelloMail;
 use App\Mail\testMail;
+use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +24,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('acceuil');
-});
+Route::post('/login', [AuthController::class ,'login']);
+Route::post('/register',  [AuthController::class ,'login']);
+
+Route::get('/login_form', [AuthController::class ,'login']);
+Route::get('/register_form',  [AuthController::class ,'login_form']);
+
 Route::get('/Connexion', function () {
     return view('/Connexion');
 });
@@ -42,12 +47,6 @@ Route::get('/Historique', function(){
 });
 Route::get('/ListeCitoyens', function(){
     return view('citoyen/liste');
-});
-Route::get('/ActeDeDeces', function(){
-    return view('/Acte_de_deces/ActeDeDeces');
-});
-Route::get('/ConnexionAdmin', function(){
-    return view('ConnexionAdmin');
 });
 //service
 Route::get('/service', [ServiceController::class, 'liste_service'])->name('listeService');
