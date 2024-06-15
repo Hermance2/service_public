@@ -24,7 +24,7 @@
             justify-content: center;
             display: inline;
             align-items: center;
-            height: 340px;
+            height: 370px;
             width: 450px;
             padding: 30px;
         }
@@ -37,7 +37,7 @@
         }
 
         input[type="text"],
-        [type="password"] {
+        [type="password"], [type="email"] {
             width: 400px;
             height: auto;
             border-radius: 5px;
@@ -58,10 +58,12 @@
     <a href="/SAP"><input type="button" value="Retour" class="btn btn-primary"></a>
     <div>
         <form action="" method="post">
-        @csrf
+            @csrf
             <h1>Se connecter en tant qu' Administrateur</h1>
             <label for="">Login</label><br>
             <input type="text" name="nom" required><br>
+            <label for="">Email</label><br>
+            <input type="email" name="email" required><br>
             <label for="">Mot de passe</label><br>
             <input type="password" name="pdw" required>
             <br><br>
