@@ -118,10 +118,10 @@
     <header>
         <h3>CitizenConnect</h3>
     </header>
-
+    <a href="/SAP"><input type="button" value="Retour" class="btn btn-primary"></a>
     <section>
         <nav>
-            Acte de naissance<br>
+            <h2>Acte de naissance</h2><br>
             Acte de naissance est un
             document juridique attestant de la naissance d'une personne.<br>
             Un acte de naissance est un document juridique authentique attestant de la naissance d'une personnalité juridique.<br>
@@ -130,15 +130,17 @@
 
             Toute naissance doit être déclarée à l'officier d'état civil de la commune où elle a eu lieu dans les trente (30) jours qui suivent la naissance.<br>
 
-            <b>les pièces requises pour avoir un acte de naissance</b><br>
-            Les pièces requises figurent dans la liste suivante :
+            <b>les pièces requises pour avoir un acte de naissance</b><br><br>
+            Les pièces requises figurent dans la liste suivante :<br>
+            <ul>
 
-            Un Certificat d’accouchement
-            Livret de famille Photocopie CIN de la mère
-            Photocopie CIN du déclarant(e)
-            Fiche statistique de naissance INSTAT
-            Un montant s’élevant à 1000 Ar
-            L’acte sera par la suite délivré instantanément<br>
+                <li>-Un Certificat d’accouchement</li>
+                <li>-Livret de famille Photocopie CIN de la mère</li>
+                <li>-Photocopie CIN du déclarant(e)</li>
+                <li>-Fiche statistique de naissance INSTAT
+                <li>-Un montant s’élevant à 1000 Ar</li>
+                <li>-L’acte sera par la suite délivré instantanément</li>
+            </ul>
         </nav>
 
         <article>

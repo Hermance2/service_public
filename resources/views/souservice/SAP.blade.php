@@ -145,7 +145,7 @@
                         <option value="valeur3">Acte de mariage et livret de famille</option>
                     </select> --}}
                     <ul id="liens">
-                        <li><a href="/ActeDeNaissance">Acte de Naissance</a></li>
+                        <li><a href="/Connexion">Acte de Naissance</a></li>
                         <li><a href="/ActeDeNaissance">Acte de dece</a></li>
                         <li><a href="/ActeDeNaissance">Acte de mariage et livret de famille</a></li>
                     </ul>

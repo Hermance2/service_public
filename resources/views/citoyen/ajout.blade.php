@@ -9,7 +9,7 @@
     <title>CitizenConnect-Ajout-Client</title>
     <style>
         body {
-            background-image: linear-gradient(skyblue, blue);
+           background-color: skyblue;
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -46,7 +46,8 @@
             text-align: center;
         }
 
-        input[type="submit"], [type="button"] {
+        input[type="submit"],
+        [type="button"] {
             border-radius: 10px;
             box-shadow: 5px 5px 8px #888888;
             width: 130px;
@@ -74,7 +75,7 @@
             <label for="">Mot de passe</label><br>
             <input type="password" name="pdw">
             <br><br>
-            <input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-success">
+            <a href="/Connexion"><input type="submit" value="Enregistrer" name="enregistrer" class="btn btn-success"></a>
             <a href="/Connexion"><input type="button" value="Retour" class="btn btn-primary"></a>
         </form>
     </div>
